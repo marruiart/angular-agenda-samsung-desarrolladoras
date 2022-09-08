@@ -53,7 +53,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Marina Ruiz - [LinkedIn](https://www.linkedin.com/in/marruiart/) - marruiart@gmail.com
 
-Project Link: [https://github.com/marruiart/javascript-calculator](https://github.com/marruiart/javascript-calculator)
+Project Link: [https://github.com/marruiart/javascript-calculator](https://github.com/marruiart/angular-agenda-samsung-desarrolladoras)
 
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
