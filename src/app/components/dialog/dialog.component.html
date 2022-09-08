@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Añade un socio</h1>
+<form [formGroup]="personForm">
+    <div mat-dialog-content>
+
+        <mat-form-field class="medium" appearance="fill" color="primary">
+            <mat-label>Nombre</mat-label>
+            <input matInput #nombre formControlName="nombre">
+            <mat-hint align="end">{{nombre.value.length || 0}}/50</mat-hint>
+            <mat-error *ngIf="nombre.value?.length || 3">mín. 3 caracteres</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="medium" appearance="fill" color="primary">
+            <mat-label>Apellidos</mat-label>
+            <input formControlName="apellidos" matInput #apellidos maxlength="100">
+            <mat-hint align="end">{{apellidos.value.length || 0}}/100</mat-hint>
+            <mat-error *ngIf="apellidos.value.length || 3">mín. 3 caracteres</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="medium" appearance="fill" color="primary">
+            <mat-label>DNI</mat-label>
+            <input formControlName="dni" matInput #dni maxlength="9" pattern="[0-9]{8}[A-Za-z]{1}">
+            <mat-hint align="end">{{dni.value.length || 0}}/9</mat-hint>
+            <mat-error *ngIf="dni.value.length < 9">mín. 9 caracteres</mat-error>
+            <mat-error *ngIf="dni.pattern">Insertar 8 números y una letra</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" color="primary">
+            <mat-label>Teléfono</mat-label>
+            <input formControlName="tel" matInput #tel maxlength="9" pattern="[0-9]{9}">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="tel.value.length < 9">mín. 9 números</mat-error>
+          </mat-form-field> 
+
+        <mat-form-field class="medium" appearance="fill" color="primary">
+            <mat-label>Sexo</mat-label>
+            <mat-select formControlName="sexo">
+                <mat-option value="hombre">Hombre</mat-option>
+                <mat-option value="mujer">Mujer</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button mat-dialog-close>Cerrar</button>
+        <button mat-raised-button color="primary" mat-dialog-save (click)="addPerson()">{{actionBtn}}</button>
+    </div>
+</form>

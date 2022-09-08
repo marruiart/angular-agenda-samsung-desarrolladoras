@@ -1,0 +1,22 @@
+{
+  "sociosGym": [
+    {
+      "nombre": "Manuel",
+      "apellidos": "Guzmán",
+      "dni": "56985312D",
+      "tel": "695257425",
+      "sexo": "hombre",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
